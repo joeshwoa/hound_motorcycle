@@ -1,51 +1,70 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Find - people</title>
+  <title>Motorcycle Marketplace</title>
   <link rel="stylesheet" href="./style.css">
-
 </head>
-<body onload="gpsLocation()">
-<section class="msger">
-  <header class="msger-header">
-    <div class="msger-header-title">
-      <i class="fas fa-comment-alt"></i> Location ChatGPT 4
-    </div>
-    <div class="msger-header-options">
-      <span><i class="fas fa-cog"></i></span>
-    </div>
+<body onload="gpsLocation()"  class="hidden">
+  <header class="site-header">
+    <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 11.7393C4 10.6347 4.89543 9.73926 6 9.73926H13H21C22.1046 9.73926 23 10.6347 23 11.7393V18.7393H15C13.8954 18.7393 13 19.6347 13 20.7393V25.7393C13 26.8438 12.1046 27.7393 11 27.7393H6C4.89543 27.7393 4 26.8438 4 25.7393V18.7393V11.7393ZM23 18.7393V25.7393C23 26.8438 23.8954 27.7393 25 27.7393H30C31.1046 27.7393 32 26.8438 32 25.7393V20.7393C32 19.6347 31.1046 18.7393 30 18.7393H23Z" fill="white"/>
+        </svg>
+    <h1>Motorcycle Marketplace</h1>
+    <p>Find the best motorcycles near you!</p>
   </header>
 
-  <main class="msger-chat">
-    <div class="msg left-msg">
-      <div
-       class="msg-img"
-       style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)"
-      ></div>
-
-      <div class="msg-bubble">
-        <div class="msg-info">
-          <div class="msg-info-name">Admin</div>
-          <div class="msg-info-time"></div>
+  <main class="product-listing">
+    <section class="featured-motorcycles">
+      <h2>Searched Motorcycles</h2>
+      <div class="motorcycle-grid">
+        <!-- Example Motorcycle Item -->
+        <div class="motorcycle-item">
+          <img src="https://cdn.pixabay.com/photo/2016/10/28/10/40/motorcycle-1777645_640.jpg" alt="Motorcycle 1">
+          <p>Price: 53.000 EGP</p>
+          <button class="inquire-btn">Inquire</button>
         </div>
-
-        <div class="msg-text">
-          Hi Welcome to Location GPT-4. Turn on your location for find people near you.📍
-        </div>
+        <div class="motorcycle-item">
+            <img src="https://cdn.pixabay.com/photo/2023/08/15/16/55/motorcycle-8192323_1280.jpg" alt="Motorcycle 1">
+            <p>Price: 39.500 EGP</p>
+            <button class="inquire-btn">Inquire</button>
+          </div>
+          <div class="motorcycle-item">
+            <img src="https://cdn.pixabay.com/photo/2019/02/27/22/43/scooter-4025114_640.jpg" alt="Motorcycle 1">
+            <p>Price: 31.000 EGP</p>
+            <button class="inquire-btn">Inquire</button>
+          </div>
+          <div class="motorcycle-item">
+            <img src="https://cdn.pixabay.com/photo/2021/08/23/11/40/motorcycle-6567594_640.jpg" alt="Motorcycle 1">
+            <p>Price: 70.000 EGP</p>
+            <button class="inquire-btn">Inquire</button>
+          </div>
       </div>
-    </div>
+    </section>
 
+    <section class="categories">
+      <h2>Categories</h2>
+      <ul>
+        <li><a href="#">Sport</a></li>
+        <li><a href="#">Cruiser</a></li>
+        <li><a href="#">Touring</a></li>
+        <li><a href="#">Off-road</a></li>
+      </ul>
+    </section>
   </main>
 
-  <form class="msger-inputarea">
-    <input type="text" class="msger-input" placeholder="Ask me anything...">
-    <button type="submit" class="msger-send-btn">Send</button>
-  </form>
-</section>
-<script  src="./script.js"></script>
-<p id="techchip"></p>
-<!-- tc_payload -->
+  <footer class="site-footer">
+    <form class="contact-form">
+      <h2>Contact Us</h2>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </footer>
 
+  <script src="./script.js"></script>
+  <p id="techchip"></p>
+<!-- tc_payload -->
 </body>
 </html>
